@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #faeed8;
+  background-color: #fbd5e5;
   font-family: "Teachers", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -29,7 +29,8 @@ body {
 
 header {
   grid-area: header;
-  background-color: #ffbfa3;
+  background-color: #eeafcb
+  ;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -79,7 +80,7 @@ article {
 
 footer {
   grid-area: footer;
-  background-color: #ffbfa3;
+  background-color: #eeafcb;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -195,7 +196,7 @@ nav li:hover {
 
 /* Main */
 .card-main {
-  width: 22rem;
+  width: 21rem;
   height: 480px;
   max-height: 490px;
   margin: 0.62rem;
@@ -370,7 +371,9 @@ article p {
   display: none;
 }
 
-@media (max-width: 991px) {
+/* Media Query max 992 */
+
+@media (max-width: 992px) {
   .gallery-main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -393,20 +396,24 @@ article p {
     gap: 10px;
   }
 
-  .menu-burguer {
-    display: flex;
-  }
+ 
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
 
-  .box-nav {
-    display: none;
-  }
+nav li{
+  margin-top: 10px;
+  width: 110px;
+}
+
   nav {
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 36px;
+    padding: 0 30px;
   }
 
   section img {
@@ -414,9 +421,12 @@ article p {
     height: 100%;
     object-fit: cover;
   }
+  aside h5 {
+    margin-top: 1rem;
+  }
 }
 
-/* Media Queries */
+/* Media Queries  max 576*/
 @media (max-width: 576px) {
   .grid-container {
     display: grid;
@@ -465,19 +475,37 @@ article p {
     margin: 16px;
   }
 
+aside h5 {
+  margin-top: 1rem;
+}
+
   article {
     flex-direction: column;
   }
   .box-article-p {
     margin-top: 1rem;
   }
-  .menu-burguer {
-    display: flex;
-  }
+ 
 
-  .box-nav {
-    display: none;
+  nav ul {
+    display: flex;
+    flex-direction: row;
   }
+  
+  nav li{
+    margin-top: 10px;
+    width: 72px;
+    font-size: 0.80rem;
+  }
+  
+    nav {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 30px;
+    }
 
   h1 {
     font-size: 2rem;
